@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Добавить фильм</title>
+</head>
+<body>
+<div class="container mt-5">
+    <h1 class="text-center mb-4">Добавить фильм</h1>
+    <form method="post">
+        {% csrf_token %}
+
+        <div class="form-group">
+            <label for="filmTitle">Название фильма</label>
+            <input type="text" class="form-control" id="filmTitle" name="title" placeholder="Введите название фильма" required>
+        </div>
+
+        <div class="form-group">
+            <label for="filmDescription">Описание</label>
+            <textarea class="form-control" id="filmDescription" name="description" rows="3" placeholder="Введите описание фильма" required></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="filmReview">Отзыв</label>
+            <textarea class="form-control" id="filmReview" name="review" rows="3" placeholder="Введите ваш отзыв о фильме" required></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block">Сохранить</button>
+    </form>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
